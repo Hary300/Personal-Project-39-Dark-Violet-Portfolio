@@ -28,12 +28,14 @@ export interface NavItem {
 
 export interface CtaButton extends NavItem {
   mailReactIcon: IconType;
+  href: '#contact';
 }
 
 interface NavData {
   logo: {
     text: string;
     logoReactComponentIcon: ComponentType<SVGProps<SVGSVGElement>>;
+    href: '#home';
   };
   navItems: NavItem[];
   ctaButton: CtaButton;
@@ -43,6 +45,7 @@ export const navData: NavData = {
   logo: {
     text: 'Your Logo',
     logoReactComponentIcon: LogoIcon,
+    href: '#home',
   },
   navItems: [
     { id: 'home', label: 'Home', href: '#home' },

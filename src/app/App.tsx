@@ -1,3 +1,4 @@
+import Footer from '@/components/layouts/Footer';
 import Header from '@/components/layouts/Header';
 import HeroSection from '@/sections/01-hero';
 import AboutSection from '@/sections/02-about';
@@ -22,6 +23,7 @@ function App() {
       <TestimonialsSection />
       <FaqsSection />
       <ContactSection />
+      <Footer />
     </div>
   );
 }
