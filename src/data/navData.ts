@@ -1,6 +1,7 @@
 import LogoIcon from '@/assets/icons/react-component-icons/LogoIcon';
 import type { ComponentType, SVGProps } from 'react';
 import type { IconType } from 'react-icons';
+import { HiOutlineMenuAlt3 } from 'react-icons/hi';
 import { LuMail } from 'react-icons/lu';
 
 export type NavLabel =
@@ -37,6 +38,7 @@ interface NavData {
     logoReactComponentIcon: ComponentType<SVGProps<SVGSVGElement>>;
     href: '#home';
   };
+  menuReactIcon: IconType;
   navItems: NavItem[];
   ctaButton: CtaButton;
 }
@@ -55,6 +57,7 @@ export const navData: NavData = {
     { id: 'faq', label: 'FAQ', href: '#faq' },
     { id: 'contact', label: 'Contact', href: '#contact' },
   ],
+  menuReactIcon: HiOutlineMenuAlt3,
   ctaButton: {
     id: 'hire-me',
     label: 'Hire Me',
