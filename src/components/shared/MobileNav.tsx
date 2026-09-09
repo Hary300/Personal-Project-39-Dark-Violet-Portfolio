@@ -2,6 +2,8 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { navData } from '@/data/navData';
 import { Button } from '../ui/button';
 import Logo from './Logo';
+import { RxCross2 } from 'react-icons/rx';
+import { Dialog as SheetPrimitive } from 'radix-ui';
 
 const MobileNav = () => {
   const ctaButton = navData.ctaButton;
@@ -17,7 +19,14 @@ const MobileNav = () => {
           </Button>
         </SheetTrigger>
         <SheetContent className='flex flex-col gap-4 px-4 py-6 items-start'>
-          <Logo />
+          <div className='flex justify-between items-center w-full'>
+            <Logo />
+            <SheetPrimitive.Close data-slot='sheet-close' asChild>
+              <Button variant='ghost' className='px-0 h-auto'>
+                <RxCross2 className='size-6' />
+              </Button>
+            </SheetPrimitive.Close>
+          </div>
 
           <div className='flex flex-col gap-4 w-full'>
             <nav className='w-full'>
