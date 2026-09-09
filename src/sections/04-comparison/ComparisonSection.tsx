@@ -4,7 +4,7 @@ import { comparisonData } from '@/data/04-comparisonData';
 
 const ComparisonSection = () => {
   return (
-    <SectionWrapper sectionId='comparison'>
+    <SectionWrapper sectionId='comparison' className='bg-neutral-100'>
       <SectionTitle title={comparisonData.title} />
     </SectionWrapper>
   );

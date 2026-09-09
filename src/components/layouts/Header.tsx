@@ -43,7 +43,7 @@ const Header = () => {
   return (
     <header
       className={cn(
-        'fixed px-4 sm:px-10 lg:px-15 xl:px-30 h-20 lg:h-21.25 flex items-center justify-between max-w-360 mx-auto w-full text-neutral-25',
+        'fixed px-4 sm:px-10 lg:px-15 xl:px-30 h-20 lg:h-21.25 flex items-center justify-between max-w-360 mx-auto w-full text-neutral-25 z-50',
         isScroll && 'backdrop-blur-2xl',
         isOverHero && 'text-neutral-950'
       )}

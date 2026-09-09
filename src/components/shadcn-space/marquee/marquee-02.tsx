@@ -1,63 +1,26 @@
-import { Marquee } from "@/components/shadcn-space/animations/marquee";
+import { Marquee } from '@/components/shadcn-space/animations/marquee';
+import { heroData } from '@/data/01-heroData';
 
-type BrandList = {
-  image: string;
-  lightimg: string;
-  name: string;
-};
-
-export default function MarqueeBrandsDemo() {
-  const brandList: BrandList[] = [
-    {
-      image: "https://images.shadcnspace.com/assets/brand-logo/logoipsum-1.svg",
-      lightimg:
-        "https://images.shadcnspace.com/assets/brand-logo/logoipsum-light-1.svg",
-      name: "Brand 1",
-    },
-    {
-      image: "https://images.shadcnspace.com/assets/brand-logo/logoipsum-2.svg",
-      lightimg:
-        "https://images.shadcnspace.com/assets/brand-logo/logoipsum-light-2.svg",
-      name: "Brand 2",
-    },
-    {
-      image: "https://images.shadcnspace.com/assets/brand-logo/logoipsum-3.svg",
-      lightimg:
-        "https://images.shadcnspace.com/assets/brand-logo/logoipsum-light-3.svg",
-      name: "Brand 3",
-    },
-    {
-      image: "https://images.shadcnspace.com/assets/brand-logo/logoipsum-4.svg",
-      lightimg:
-        "https://images.shadcnspace.com/assets/brand-logo/logoipsum-light-4.svg",
-      name: "Brand 4",
-    },
-    {
-      image: "https://images.shadcnspace.com/assets/brand-logo/logoipsum-5.svg",
-      lightimg:
-        "https://images.shadcnspace.com/assets/brand-logo/logoipsum-light-5.svg",
-      name: "Brand 5",
-    },
-  ];
+export default function MarqueeSkills() {
+  const roles = heroData.runningTextSkills.roles;
+  const dividerIcon = heroData.runningTextSkills.figmaDividerIcon;
 
   return (
-    <>
-      <Marquee className="[--duration:20s] p-0" pauseOnHover>
-        {brandList.map((brand, index) => (
-          <div key={index}>
+    <div className='py-6 lg:py-10 bg-neutral-950 origin-bottom-left -rotate-2'>
+      <Marquee className='[--duration:20s] p-0' pauseOnHover>
+        {roles.map((role, index) => (
+          <div key={index} className='flex items-center'>
+            <p className='font-bold text-display-xs lg:text-display-2xl text-neutral-25 pr-4'>
+              {role}
+            </p>
             <img
-              src={brand.image}
-              alt={brand.name}
-              className="w-36 h-8 mr-6 lg:mr-20 dark:hidden"
-            />
-            <img
-              src={brand.lightimg}
-              alt={brand.name}
-              className="hidden dark:block w-36 h-8 mr-12 lg:mr-20"
+              src={dividerIcon}
+              alt='yellow sparkle'
+              className='size-8 lg:ize-12'
             />
           </div>
         ))}
       </Marquee>
-    </>
+    </div>
   );
 }

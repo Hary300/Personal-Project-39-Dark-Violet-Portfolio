@@ -11,14 +11,14 @@ const LogoIcon = ({ className, ...props }: SVGProps<SVGSVGElement>) => {
       {...props}
     >
       <path
-        fill-rule='evenodd'
-        clip-rule='evenodd'
+        fillRule='evenodd'
+        clipRule='evenodd'
         d='M17.4195 0L0 5.94714V22.5991L6.27656 20.4563V10.1817L17.4195 6.37738V0Z'
         fill='currentColor'
       />
       <path
-        fill-rule='evenodd'
-        clip-rule='evenodd'
+        fillRule='evenodd'
+        clipRule='evenodd'
         d='M8.88052 11.7441L26.3 5.79693V22.4489L8.88052 28.3961V11.7441Z'
         fill='currentColor'
       />
