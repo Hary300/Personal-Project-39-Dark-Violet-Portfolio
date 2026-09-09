@@ -1,37 +1,27 @@
-import LogoIcon from '@/assets/icons/react-component-icons/LogoIcon';
-import { Button } from '@/components/ui/button';
-import { LuMail } from 'react-icons/lu';
-import { RxCross2 } from 'react-icons/rx';
-import {
-  FiArrowRight,
-  FiCheck,
-  FiMapPin,
-  FiMinus,
-  FiPlus,
-  FiSend,
-  FiSmartphone,
-} from 'react-icons/fi';
-import { HiOutlineChatBubbleLeftRight } from 'react-icons/hi2';
+import Header from '@/components/layouts/Header';
+import HeroSection from '@/sections/01-hero';
+import AboutSection from '@/sections/02-about';
+import SkillSection from '@/sections/03-skill';
+import ComparisonSection from '@/sections/04-comparison';
+import ProjectSection from '@/sections/05-project';
+import ExperienceSection from '@/sections/06-experience';
+import TestimonialsSection from '@/sections/07-testimonials';
+import FaqsSection from '@/sections/08-faqs';
+import ContactSection from '@/sections/09-contact';
 
 function App() {
   return (
     <div className='max-w-360 mx-auto'>
-      <h1>Poppins</h1>
-      <Button>
-        {' '}
-        <FiCheck className='stroke-5' />
-        <RxCross2 className='stroke-2' />
-        <FiArrowRight className='stroke-5' />
-        <HiOutlineChatBubbleLeftRight className='stroke-4' />
-        <FiPlus className='stroke-4' />
-        <FiMinus className='stroke-4' />
-        <FiSmartphone className='stroke-3' />
-        <FiMapPin className='stroke-3' />
-        <FiSend className='stroke-3' />
-        Test
-      </Button>
-      <LuMail className='stroke-2' />
-      <LogoIcon className='text-red-500' />
+      <Header />
+      <HeroSection />
+      <AboutSection />
+      <SkillSection />
+      <ComparisonSection />
+      <ProjectSection />
+      <ExperienceSection />
+      <TestimonialsSection />
+      <FaqsSection />
+      <ContactSection />
     </div>
   );
 }
