@@ -1,5 +1,5 @@
 import SectionWrapper from '@/components/layouts/SectionWrapper';
-import MarqueeSkills from '@/components/shadcn-space/marquee/marquee-02';
+import MarqueeSkills from '@/components/shadcn-space/marquee/MarqueeSkills';
 import { heroData } from '@/data/01-heroData';
 import { popIn } from '@/motions/popIn';
 import { motion } from 'motion/react';
