@@ -194,7 +194,11 @@
   |--------------------
   */
 
-  --gradient-blue: linear-gradient(90deg, #002c6e 0%, #0c4eaf 100%);
+  --background-image-gradient-blue: linear-gradient(
+    90deg,
+    #002c6e 0%,
+    #0c4eaf 100%
+  );
 
   /*
   |--------------------

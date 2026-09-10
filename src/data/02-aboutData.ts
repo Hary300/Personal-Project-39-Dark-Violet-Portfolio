@@ -14,6 +14,7 @@ import project2 from '@/assets/images/projects/project2.png';
 import project4 from '@/assets/images/projects/project4.png';
 import { LuMail } from 'react-icons/lu';
 import devImg from '@/assets/images/dev/devImage.webp';
+import dotPattern from '@/assets/images/dotPattern.png';
 import type { ProfileImage } from './01-heroData';
 import type { CtaButton } from './navData';
 import { HiSparkles } from 'react-icons/hi';
@@ -22,6 +23,7 @@ import indonesia from '@/assets/images/flags/indonesia.png';
 import usa from '@/assets/images/flags/usa.png';
 import germany from '@/assets/images/flags/germany.png';
 import worldMap from '@/assets/images/worldMap.png';
+import { TiStarFullOutline } from 'react-icons/ti';
 
 export interface TechSkill {
   name: string;
@@ -37,6 +39,7 @@ export interface MapPin {
   country: string;
   figFlagIconSrc: string;
   figFlagIconAlt: string;
+  position: string;
 }
 
 export interface WhyChooseMeSection {
@@ -47,6 +50,7 @@ export interface WhyChooseMeSection {
 
 export interface ExpertSkillSection {
   title: string;
+  starReactIcon: IconType;
   ratingStars: number;
   description: string;
   skills: TechSkill[];
@@ -65,6 +69,7 @@ export interface ExperienceCardSection {
 
 export interface ProfileCardSection {
   name: string;
+  bgPattern: string;
   ctaButton: CtaButton;
   profileImage: ProfileImage;
 }
@@ -81,8 +86,8 @@ export interface AboutData {
   greeting: string;
   bioHighlighted: string;
   bioDescription: string;
-  whyChooseMe: WhyChooseMeSection;
-  expertSkill: ExpertSkillSection;
+  whyChooseMeCard: WhyChooseMeSection;
+  expertSkillCard: ExpertSkillSection;
   experienceCard: ExperienceCardSection;
   profileCard: ProfileCardSection;
   digitalProductsCard: DigitalProductsCardSection;
@@ -95,7 +100,7 @@ export const aboutData: AboutData = {
   bioDescription:
     'Prioritizing responsive design, performance optimization, and user-centric features to deliver exceptional web experiences.',
 
-  whyChooseMe: {
+  whyChooseMeCard: {
     title: 'Why Choose Me',
     subtitle:
       'Delivering excellence with innovative solutions and seamless execution.',
@@ -109,9 +114,10 @@ export const aboutData: AboutData = {
     ],
   },
 
-  expertSkill: {
+  expertSkillCard: {
     title: 'Expert Skill',
     ratingStars: 5,
+    starReactIcon: TiStarFullOutline,
     description:
       'Mastering modern technologies to deliver impactful and efficient solutions',
     skills: [
@@ -140,6 +146,7 @@ export const aboutData: AboutData = {
 
   profileCard: {
     name: 'HARY THREE HUNDRED',
+    bgPattern: dotPattern,
     ctaButton: {
       id: 'hire-me',
       label: 'Hire Me',
@@ -164,12 +171,19 @@ export const aboutData: AboutData = {
         country: 'Germany',
         figFlagIconSrc: germany,
         figFlagIconAlt: 'german flag',
+        position: 'top-[35%] right-[35%]',
       },
-      { country: 'USA', figFlagIconSrc: usa, figFlagIconAlt: 'american flag' },
+      {
+        country: 'USA',
+        figFlagIconSrc: usa,
+        figFlagIconAlt: 'american flag',
+        position: 'top-[46%] right-[60%] flex-row-reverse',
+      },
       {
         country: 'Indonesia',
         figFlagIconSrc: indonesia,
         figFlagIconAlt: 'indonesian flag',
+        position: 'top-[80%] sm:top-[65%] right-[40%] sm:right-[5%]',
       },
     ],
     stats: [
