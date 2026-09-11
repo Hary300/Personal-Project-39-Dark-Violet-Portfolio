@@ -15,7 +15,6 @@ export interface FaqSupportCard {
     imgAlt: string;
   };
   title: string;
-  subtitle: string;
   ctaButtonText: string;
   ctaHref: string;
 }
@@ -24,8 +23,8 @@ export interface FaqData {
   title: string;
   badgeIcon: IconType;
   accordionIcon: {
-    expandIcon: IconType;
-    collapseIcon: IconType;
+    plusIcon: IconType;
+    minusIcon: IconType;
   };
   supportCard: FaqSupportCard;
   faqs: Faq[];
@@ -34,14 +33,13 @@ export interface FaqData {
 export const faqData: FaqData = {
   title: 'Have Questions?',
   badgeIcon: HiOutlineChatBubbleLeftRight,
-  accordionIcon: { expandIcon: FiPlus, collapseIcon: FiMinus },
+  accordionIcon: { plusIcon: FiPlus, minusIcon: FiMinus },
   supportCard: {
     avatar: {
       imgSrc: devImg,
       imgAlt: 'Edwin Anderson profile picture',
     },
-    title: 'Have more questions?',
-    subtitle: 'Send me a message.',
+    title: 'Have more questions? Send me a message.',
     ctaButtonText: 'Get in touch',
     ctaHref: '#contact',
   },
