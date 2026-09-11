@@ -1,7 +1,10 @@
 import errorEnvelope from '@/assets/images/modal/errorEnvelope.png';
 import successEnvelope from '@/assets/images/modal/successEnvelope.png';
 
-export interface ModalStateConfig {
+export type ModalStatus = 'success' | 'error';
+
+export interface ModalContent {
+  status: ModalStatus;
   illustration: {
     imgSrc: string;
     imgAlt: string;
@@ -12,12 +15,13 @@ export interface ModalStateConfig {
 }
 
 export interface ContactModalSection {
-  success: ModalStateConfig;
-  error: ModalStateConfig;
+  success: ModalContent;
+  error: ModalContent;
 }
 
-export const contactModalData: ContactModalSection = {
+export const modalData: ContactModalSection = {
   success: {
+    status: 'success',
     illustration: {
       imgSrc: successEnvelope,
       imgAlt:
@@ -29,6 +33,7 @@ export const contactModalData: ContactModalSection = {
     ctaButtonText: 'Back to Home',
   },
   error: {
+    status: 'error',
     illustration: {
       imgSrc: errorEnvelope,
       imgAlt:
